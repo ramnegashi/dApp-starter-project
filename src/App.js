@@ -117,6 +117,7 @@ const App = () => {
       });
       console.log("Connected: ", accounts[0]);
       setCurrentAccount(accounts[0]);
+      getAllWaves();
     } catch (error) {
       console.log(error);
     }
@@ -234,9 +235,7 @@ const App = () => {
                   <div>Message: {wave.message}</div>
                   <div>
                     Lottery:
-                    {wave.wonEth
-                      ? "You won 0.0001 Eth :-)"
-                      : "You won nothing :-("}
+                    {wave.wonEth ? "Won 0.0001 Eth :-)" : "Won nothing :-("}
                   </div>
                 </div>
               );
